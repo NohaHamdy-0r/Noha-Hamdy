@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noha Hamad - فنون الموزاييك والفسيفساء</title>
-    <!-- FontAwesome لأيقونات الواتساب والإيميل الشبيهة بالمواقع العالمية -->
+    <title>فضيه - فنون الموزاييك والفسيفساء</title>
+    <!-- FontAwesome للأيقونات الاحترافية -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts - خط قاهري احترافي ومحسن لقراءه حادة -->
+    <!-- Google Fonts - خط قاهري حاد واحترافي -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-dark: #1a252f;  /* لون كحلي فاخر وغامق جداً لوضوح النصوص */
-            --accent-gold: #c5a059;   /* لون ذهبي ملكي مخصص لأعمال الفنون والموزاييك */
-            --text-main: #2b2b2b;     /* لون نصوص حاد وواضح تماماً */
-            --bg-light: #fcedeb;      /* خلفية دافئة خفيفة تبرز الصور */
+            --primary-dark: #121921;  /* كحلي داكن فاخر */
+            --accent-gold: #c5a059;   /* ذهبي ملكي للأعمال الفنية */
+            --text-main: #222222;     /* نصوص حادة وواضحة لقراءة ممتازة */
+            --bg-light: #f4ede6;      /* خلفية دافئة تبرز جمال اللوحات */
             --whatsapp-color: #25D366;
         }
 
@@ -23,7 +23,6 @@
             margin: 0;
             padding: 0;
             font-family: 'Cairo', sans-serif;
-            letter-spacing: 0.5px;
         }
 
         body {
@@ -32,10 +31,10 @@
             line-height: 1.7;
         }
 
-        /* الهيدر وشريط التنقل العلوي */
+        /* الهيدر وشريط التنقل */
         header {
             background-color: #ffffff;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -44,20 +43,33 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--primary-dark);
+        .brand-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             text-decoration: none;
         }
 
-        .logo span {
+        .logo-img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .site-name {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+
+        .site-name span {
             color: var(--accent-gold);
         }
 
@@ -79,11 +91,11 @@
             color: var(--accent-gold);
         }
 
-        /* زر الواتساب العلوي الاحترافي */
+        /* زر الواتساب العلوي */
         .btn-whatsapp-top {
             background-color: var(--whatsapp-color);
             color: white;
-            padding: 8px 18px;
+            padding: 10px 20px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
@@ -91,8 +103,8 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
-            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+            transition: all 0.3s;
         }
 
         .btn-whatsapp-top:hover {
@@ -100,72 +112,95 @@
             transform: translateY(-2px);
         }
 
-        /* قسم الهيرو (صورة الخلفية مع اسم نوهى حمد) */
-        .hero {
-            background: linear-gradient(rgba(26, 37, 47, 0.75), rgba(26, 37, 47, 0.85)), url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1200') no-repeat center center/cover;
-            height: 70vh;
+        /* قسم الهيرو الرئيسي المتجاوب */
+        .hero-section {
+            background: linear-gradient(rgba(18, 25, 33, 0.82), rgba(18, 25, 33, 0.9)), url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1200') no-repeat center center/cover;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 50px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text {
+            color: #ffffff;
+        }
+
+        .hero-text h1 {
+            font-size: 46px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .hero-text p {
+            font-size: 19px;
+            color: #dcdcdc;
+            margin-bottom: 35px;
+            max-width: 600px;
+        }
+
+        /* إطار الصورة الفنية الجانبية */
+        .hero-profile-box {
             display: flex;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 20px;
         }
 
-        .hero-content .owner-name {
-            font-size: 20px;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
+        .profile-frame {
+            border: 3px solid var(--accent-gold);
+            padding: 12px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            max-width: 360px;
+            width: 100%;
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: auto;
             display: block;
-        }
-
-        .hero-content h1 {
-            font-size: 45px;
-            margin-bottom: 15px;
-            font-weight: 800;
-            color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero-content p {
-            font-size: 20px;
-            max-width: 650px;
-            margin: 0 auto 30px;
-            font-weight: 400;
-            color: #e0e0e0;
+            border-radius: 4px;
+            object-fit: cover;
         }
 
         .btn-main {
             background-color: var(--accent-gold);
             color: var(--primary-dark);
-            padding: 12px 35px;
+            padding: 14px 40px;
             text-decoration: none;
             border-radius: 4px;
             font-weight: 700;
             font-size: 16px;
+            display: inline-block;
             box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
             transition: all 0.3s;
         }
 
         .btn-main:hover {
             background-color: #d9b36a;
-            color: #000;
             transform: translateY(-2px);
         }
 
         /* معرض الأعمال */
         .portfolio {
             max-width: 1200px;
-            margin: 80px auto;
+            margin: 90px auto;
             padding: 0 20px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 800;
             margin-bottom: 50px;
             color: var(--primary-dark);
@@ -185,7 +220,7 @@
             background: #ffffff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -196,7 +231,7 @@
 
         .grid-item img {
             width: 100%;
-            height: 280px;
+            height: 290px;
             object-fit: cover;
             display: block;
         }
@@ -215,13 +250,12 @@
         .item-info p {
             font-size: 15px;
             color: #555;
-            font-weight: 400;
         }
 
         /* قسم التواصل */
         .contact {
             background-color: #ffffff;
-            padding: 80px 20px;
+            padding: 90px 20px;
             text-align: center;
         }
 
@@ -231,11 +265,10 @@
             background: var(--bg-light);
             padding: 40px 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
 
         .contact-box p {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 600;
             color: var(--primary-dark);
             margin-bottom: 20px;
@@ -249,27 +282,27 @@
             text-decoration: none;
             font-size: 20px;
             font-weight: 700;
-            transition: color 0.3s;
             border-bottom: 2px solid var(--accent-gold);
             padding-bottom: 5px;
+            transition: color 0.3s;
         }
 
         .email-link:hover {
             color: var(--accent-gold);
         }
 
-        /* زر واتساب عائم وسفلي للاحتياط ومريح لليد */
+        /* زر واتساب عائم سفلي */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
             left: 30px;
             background-color: var(--whatsapp-color);
             color: white;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             text-align: center;
-            font-size: 32px;
+            font-size: 34px;
             box-shadow: 0 8px 25px rgba(37,211,102,0.4);
             z-index: 1000;
             display: flex;
@@ -280,7 +313,7 @@
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.15);
+            transform: scale(1.12);
             background-color: #1ebd58;
         }
 
@@ -289,7 +322,7 @@
             background-color: var(--primary-dark);
             color: #fff;
             text-align: center;
-            padding: 25px;
+            padding: 30px;
             font-size: 15px;
             font-weight: 600;
         }
@@ -298,38 +331,48 @@
             color: var(--accent-gold);
         }
 
-        /* التجاوب مع الموبايل */
+        /* التجاوب مع الشاشات */
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-text p {
+                margin: 0 auto 35px;
+            }
+            .hero-text h1 {
+                font-size: 34px;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
                 gap: 15px;
-                text-align: center;
             }
             .nav-right {
                 flex-direction: column;
-                gap: 10px;
-            }
-            .hero-content h1 {
-                font-size: 32px;
-            }
-            .hero-content p {
-                font-size: 16px;
+                gap: 15px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر والبار العلوي -->
+    <!-- الهيدر واللوجو والشريط العلوي -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">موزاييك <span>Noha Hamad</span></a>
+            <a href="#" class="brand-wrapper">
+                <!-- هنا الشعار المعتمد المأخوذ من صورتك مباشرة -->
+                <img src="photo_2026-06-29_12-01-55.jpg" alt="Logo" class="logo-img">
+                <div class="site-name">فضيه <span>للموزاييك</span></div>
+            </a>
             <div class="nav-right">
                 <nav class="nav-links">
-                    <a href="#portfolio">المعرض</a>
+                    <a href="#portfolio">معرض اللوحات</a>
                     <a href="#contact">تواصل معنا</a>
                 </nav>
-                <!-- زر الواتساب العلوي المطلوب -->
                 <a href="https://wa.me/201038068089" class="btn-whatsapp-top" target="_blank">
                     <i class="fab fa-whatsapp"></i> تواصل عبر الواتساب
                 </a>
@@ -337,19 +380,27 @@
         </div>
     </header>
 
-    <!-- قسم الترحيب الرئيسي مع صورة الخلفية واسم المسؤولة -->
-    <section class="hero">
-        <div class="hero-content">
-            <span class="owner-name">Noha Hamad Portfolio</span>
-            <h1>إبداع الفسيفساء والموزاييك برؤية احترافية</h1>
-            <p>نصنع من تفاصيل الأحجار والزجاج جداريات فخمة تنبض بالحياة لتناسب أرقى الديكورات والمساحات.</p>
-            <a href="#portfolio" class="btn-main">تصفح الأعمال الفنية</a>
+    <!-- قسم الهيرو الرئيسي الجانبي -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>فضيه للموزاييك والفسيفساء</h1>
+                <p>نصنع من تفاصيل الأحجار والزجاج جداريات فخمة تنبض بالحياة لتناسب أرقى الديكورات والمساحات الداخلية والخارجية برؤية فنية فريدة.</p>
+                <a href="#portfolio" class="btn-main">استكشف التصاميم الفنية</a>
+            </div>
+            
+            <!-- برواز الصورة الفنية التوضيحية بالجانب (يمكنك وضع صورة لأي لوحة موزاييك مميزة هنا) -->
+            <div class="hero-profile-box">
+                <div class="profile-frame">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=500" alt="معرض فضيه">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- قسم المعرض وعرض الشغل الفني -->
+    <!-- معرض الأعمال واللوحات -->
     <section class="portfolio" id="portfolio">
-        <h2 class="section-title">أحدث جداريات <span>الموزاييك</span></h2>
+        <h2 class="section-title">أحدث أعمال <span>فضيه</span></h2>
         <div class="grid">
             <!-- عمل 1 -->
             <div class="grid-item">
@@ -378,26 +429,25 @@
         </div>
     </section>
 
-    <!-- قسم التواصل عبر الإيميل -->
+    <!-- قسم التواصل عبر البريد الإلكتروني -->
     <section class="contact" id="contact">
         <h2 class="section-title">ابدأ مشروعك الآن</h2>
         <div class="contact-box">
             <p>هل تود طلب لوحة مخصصة أو جدارية بمقاسات معينة؟ يسعدنا استقبال طلباتكم عبر البريد الإلكتروني الرسمي:</p>
-            <!-- يمكنك تغيير البريد الإلكتروني التالي لبريدك الخاص -->
-            <a href="mailto:noha.hamad.mosaic@example.com" class="email-link">
-                <i class="fas fa-envelope"></i> noha.hamad.mosaic@example.com
+            <a href="mailto:info@faddah-mosaic.com" class="email-link">
+                <i class="fas fa-envelope"></i> info@faddah-mosaic.com
             </a>
         </div>
     </section>
 
-    <!-- زر واتساب عائم (سفلي) لسهولة الاستخدام من الموبايل دائمًا -->
+    <!-- زر واتساب عائم سفلي -->
     <a href="https://wa.me/201038068089" class="whatsapp-float" target="_blank" title="تواصل معنا عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- الفوتر السفلي -->
+    <!-- الفوتر -->
     <footer>
-        <p>&copy; 2026 جميع الحقوق محفوظة | تصميم موقع الفنانه <span>نهى حمد</span></p>
+        <p>&copy; 2026 جميع الحقوق محفوظة | موقع <span>فضيه للموزاييك والفسيفساء</span></p>
     </footer>
 
 </body>
