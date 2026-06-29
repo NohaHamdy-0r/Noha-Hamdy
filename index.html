@@ -1,1 +1,333 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أبشار للموزاييك - لوحات وفنون جدارية</title>
+    <!-- FontAwesome لأيقونات الواتساب والإيميل -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - خط قاهري أنيق -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* إعدادات التصميم العامة - ستايل عصري ومريح */
+        :root {
+            --primary-color: #2c3e50; /* لون داكن فخم */
+            --accent-color: #c0392b;  /* لون مميز للتفاصيل */
+            --bg-light: #f9f9f9;      /* خلفية فاتحة ونظيفة */
+            --text-dark: #333333;
+            --whatsapp-color: #25D366;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* الهيدر والنافبار */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* قسم الترحيب البطل (Hero Section) */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1200') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 25px;
+            font-weight: 300;
+        }
+
+        .btn-main {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-main:hover {
+            background-color: #a83226;
+        }
+
+        /* معرض أعمال الموزاييك (Portfolio Grid) */
+        .portfolio {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .grid-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item-info {
+            padding: 20px;
+        }
+
+        .item-info h3 {
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .item-info p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* قسم التواصل (Contact Section) */
+        .contact {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+        }
+
+        .email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: color 0.3s;
+        }
+
+        .email-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* زر واتساب عائم واحترافي */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px; /* جهة اليسار لتناسب التصفح باللغة العربية */
+            background-color: var(--whatsapp-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #1ebd58;
+        }
+
+        /* الفوتر (الأسفل) */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* استعلامات الشاشات الصغيرة لجعل الموقع متجاوباً */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero-content h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">موزاييك الفن</a>
+            <nav class="nav-links">
+                <a href="#portfolio">أعمالنا</a>
+                <a href="#contact">تواصل معنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- قسم الترحيب البطل -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>فن الموزاييك برؤية عصرية</h1>
+            <p>نصنع من تفاصيل الأحجار والزجاج لوحات جدارية تحكي قصصاً من الجمال والفخامة تناسب ذوقك.</p>
+            <a href="#portfolio" class="btn-main">تصفح المعرض</a>
+        </div>
+    </section>
+
+    <!-- معرض الأعمال -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">أحدث أعمالنا</h2>
+        <div class="grid">
+            <!-- عمل 1 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?q=80&w=500" alt="لوحة جدارية موزاييك">
+                <div class="item-info">
+                    <h3>جدارية الموزاييك الكلاسيكية</h3>
+                    <p>تصميم هندسي متناسق مستوحى من الفنون العريقة مدمج بلمسة حديثة.</p>
+                </div>
+            </div>
+            <!-- عمل 2 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=500" alt="لوحة مودرن">
+                <div class="item-info">
+                    <h3>لوحة تجريدية مودرن</h3>
+                    <p>قطع زجاجية ملونة تعكس الإضاءة بشكل ساحر لتعطي حيوية للمكان.</p>
+                </div>
+            </div>
+            <!-- عمل 3 -->
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a6211?q=80&w=500" alt="موزاييك أرضيات">
+                <div class="item-info">
+                    <h3>تصميم أرضيات فخم</h3>
+                    <p>تفاصيل دقيقة مصنعة خصيصاً للمساحات الواسعة والمداخل الفاخرة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">بدء مشروعك الخاص</h2>
+        <div class="contact-box">
+            <p>هل لديك فكرة أو تبحث عن تصميم مخصص لمساحتك؟ يسعدنا تواصلك معنا مباشرة عبر البريد الإلكتروني:</p>
+            <!-- استبدل الإيميل هنا بإيميلك الخاص -->
+            <a href="mailto:info@example.com" class="email-link">
+                <i class="fas fa-envelope"></i> info@example.com
+            </a>
+        </div>
+    </section>
+
+    <!-- زر واتساب العائم -->
+    <!-- استبدل الرقم 123456789 برقم الواتساب الخاص بك كاملاً مع رمز الدولة -->
+    <a href="https://wa.me/201234567890" class="whatsapp-float" target="_blank" title="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة | تصميم معرض الموزاييك الاحترافي</p>
+    </footer>
+
+</body>
+</html>
